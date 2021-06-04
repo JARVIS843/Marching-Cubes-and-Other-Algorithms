@@ -18,7 +18,7 @@ public class CamMovement : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit)) {
                 if (hit.transform.tag == "Terrain")
-                    hit.transform.GetComponent<mc>().PlaceTerrain(hit.point);
+                    hit.transform.GetComponent<Chunk>().PlaceTerrain(hit.point);
             }
 
         }
@@ -28,7 +28,7 @@ public class CamMovement : MonoBehaviour
            RaycastHit hit;
            if (Physics.Raycast(ray, out hit)) {
                if (hit.transform.tag == "Terrain")
-                   hit.transform.GetComponent<mc>().RemoveTerrain(hit.point);
+                   hit.transform.GetComponent<Chunk>().RemoveTerrain(hit.point);
                
            }
        }
